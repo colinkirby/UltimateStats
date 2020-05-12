@@ -11,8 +11,9 @@ zoneWidth = Math.round(zoneHeight * 1.75);
 endZoneWidth = Math.round((width - zoneWidth) /2)
 endZoneWidthExp = Math.round(zoneHeight * 0.625);
 
+//Entire field, including endzones and zones
 export class Field extends React.Component {
-  
+
   render() {
 
     return(
@@ -48,6 +49,6 @@ const styles = StyleSheet.create({
     right: 0,
     height: zoneHeight,
     width: endZoneWidth,
-    backgroundColor: '#217B00', 
+    backgroundColor: '#217B00',
   },
 });

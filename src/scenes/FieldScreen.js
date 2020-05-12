@@ -10,7 +10,7 @@ zoneHeight = Math.round(height - 49);
 zoneWidth = Math.round(zoneHeight * 1.75);
 endZoneWidth = Math.round((width - zoneWidth) /2)
 endZoneWidthExp = Math.round(zoneHeight * 0.625);
-        
+
 export default class FieldScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -23,7 +23,7 @@ export default class FieldScreen extends React.Component {
     render() {
 
       return (
-        <View style = {styles.header}>
+        <View>
           <StatusBar hidden = {true} />
           <View style ={styles.header}/>
           <Field/>
@@ -45,4 +45,3 @@ const styles = StyleSheet.create({
   },
 
 });
-

@@ -8,12 +8,15 @@ import {
 } from "react-native";
 import { createResponder } from 'react-native-gesture-responder';
 
+//TODO
+//Use redux to use window dimensions as container
 let { width, height } = Dimensions.get('window');
 zoneHeight = Math.round(height - 49);
 zoneWidth = Math.round(zoneHeight * 1.75);
 endZoneWidth = Math.round((width - zoneWidth) /2)
 endZoneWidthExp = Math.round(zoneHeight * 0.625);
 
+//Drag disc around, on release opens the player modal
 export class Disc extends React.Component {
   constructor() {
     super();
@@ -21,9 +24,7 @@ export class Disc extends React.Component {
       x: new Animated.Value(0),
       y: new Animated.Value(0),
     };
-  }
 
-  componentWillMount() {
     this.Responder = createResponder({
       onStartShouldSetResponder: () => true,
       onStartShouldSetResponderCapture: () => true,
@@ -35,7 +36,7 @@ export class Disc extends React.Component {
       onResponderRelease: (evt, gestureState) => {
         let centerX = this.state.x._value + CIRCLE_RADIUS;
         let centerY = this.state.y._value + CIRCLE_RADIUS;
-        console.log(centerX + " : " + centerY);
+        this.props.updateDisc(centerX, centerY)
         this.props.toggleModal();
       },
       onPanResponderTerminationRequest: () => true,

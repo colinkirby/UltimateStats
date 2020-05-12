@@ -9,7 +9,9 @@ zoneWidth = Math.round(zoneHeight * 1.75);
 endZoneWidth = Math.round((width - zoneWidth) /2)
 endZoneWidthExp = Math.round(zoneHeight * 0.625);
 
-
+//TODO
+//Only one endzone is working as intended, likely a styling issue
+//For now one endzone is replaced with a touchable rectangle
 export class EndZone extends React.Component {
   state = {
     endZoneMode: 'scaled',
