@@ -17,4 +17,13 @@ Goals
 * Build the header, which will track display game data (score, time etc.), and have an undo button that simply pops the previous action off the stack
 * User testing when I can play ultimate again
 
+Instructions
+--------------
+I'm not entirely sure as it's been a while but I believe
+1. Install expo on mobile phone or use emulator
+2. npm init
+3. npm install expo (maybe expo-cli as well?)
+4. expo start
+5. Read QR code on expo app (only the tunnel setting works for me)
+
 
